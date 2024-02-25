@@ -14,12 +14,19 @@ public class mukemmelSayi {
 			toplam=0;
 			System.out.print("Bir sayı giriniz: ");
 			sayi = input.nextInt();
-						
-			for (i=1 ; i<sayi ; i++) {
-				if(sayi%i==0) toplam=toplam+i; 
+			
+			if (sayi>=1) {
+				
+				for (i=1 ; i<sayi ; i++) {
+					if(sayi%i==0) toplam=toplam+i; 
+				}
+				
+				if (toplam==sayi) System.out.println(sayi+" Mükemmel sayıdır.\n\n");
+				else System.out.println(sayi+" Mükemmel sayi değildir.\n\n");					
 			}
-			if (toplam==sayi) System.out.println(sayi+" Mükemmel sayıdır.\n\n");
-			else System.out.println(sayi+" Mükemmel sayi değildir.\n\n");		
+			
+			else System.out.println("Pozitif tam sayı giriniz. \n\n");
+	
 		}
 	}
 }
